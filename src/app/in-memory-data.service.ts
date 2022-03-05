@@ -515,7 +515,7 @@ export class InMemoryDataService implements InMemoryDbService {
                     home: "NULL",
                     away: "NULL"
                 },
-                    score: {
+                score: {
                     halftime: {
                         home: "NULL",
                         away: "NULL"
@@ -603,7 +603,282 @@ export class InMemoryDataService implements InMemoryDbService {
                 }
             }
         ];
-        return { teams: teams, fixtures: fixtures };
+        const results = [
+            {
+
+                fixture: {
+                    id: 710816,
+                    referee: "NULL",
+                    timezone: "UTC",
+                    date: "2022-03-16T20:15:00+00:00",
+                    timestamp: 1647461700,
+                    periods: {
+                        first: "NULL",
+                        second: "NULL"
+                    },
+                    venue: {
+                        id: 494,
+                        name: "Emirates Stadium",
+                        city: "London"
+                    },
+                    status: {
+                        long: "Not Started",
+                        short: "NS",
+                        elapsed: "NULL"
+                    }
+                },
+                league: {
+                    id: 39,
+                    name: "Premier League",
+                    country: "England",
+                    logo: "https://media.api-sports.io/football/leagues/39.png",
+                    flag: "https://media.api-sports.io/flags/gb.svg",
+                    season: 2021,
+                    round: "Regular Season - 27"
+                },
+                teams: {
+                    home: {
+                        id: 42,
+                        name: "Arsenal",
+                        logo: "https://media.api-sports.io/football/teams/42.png",
+                        winner: "NULL"
+                    },
+                    away: {
+                        id: 40,
+                        name: "Liverpool",
+                        logo: "https://media.api-sports.io/football/teams/40.png",
+                        winner: "NULL"
+                    }
+                },
+                goals: {
+                    home: "NULL",
+                    away: "NULL"
+                },
+                score: {
+                    halftime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    fulltime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    extratime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    penalty: {
+                        home: "NULL",
+                        away: "NULL"
+                    }
+                }
+            },
+            {
+                fixture: {
+                    id: 710817,
+                    referee: "M. Dean",
+                    timezone: "UTC",
+                    date: "2022-02-26T15:00:00+00:00",
+                    timestamp: 1645887600,
+                    periods: {
+                        first: 1645887600,
+                        second: 1645891200
+                    },
+                    venue: {
+                        id: 10503,
+                        name: "Brentford Community Stadium",
+                        city: "Brentford, Middlesex"
+                    },
+                    status: {
+                        long: "Match Finished",
+                        short: "FT",
+                        elapsed: 90
+                    }
+                },
+                league: {
+                    id: 39,
+                    name: "Premier League",
+                    country: "England",
+                    logo: "https://media.api-sports.io/football/leagues/39.png",
+                    flag: "https://media.api-sports.io/flags/gb.svg",
+                    season: 2021,
+                    round: "Regular Season - 27"
+                },
+                teams: {
+                    home: {
+                        id: 55,
+                        name: "Brentford",
+                        logo: "https://media.api-sports.io/football/teams/55.png",
+                        winner: false
+                    },
+                    away: {
+                        id: 34,
+                        name: "Newcastle",
+                        logo: "https://media.api-sports.io/football/teams/34.png",
+                        winner: true
+                    }
+                },
+                goals: {
+                    home: 0,
+                    away: 2
+                },
+                score: {
+                    halftime: {
+                        home: 0,
+                        away: 2
+                    },
+                    fulltime: {
+                        home: 0,
+                        away: 2
+                    },
+                    extratime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    penalty: {
+                        home: "NULL",
+                        away: "NULL"
+                    }
+                }
+            },
+            {
+                fixture: {
+                    id: 710818,
+                    referee: "J. Brooks",
+                    timezone: "UTC",
+                    date: "2022-02-26T15:30:00+00:00",
+                    timestamp: 1645889400,
+                    periods: {
+                        first: 1645889400,
+                        second: 1645893000
+                    },
+                    venue: {
+                        id: 508,
+                        name: "The American Express Community Stadium",
+                        city: "Falmer, East Sussex"
+                    },
+                    status: {
+                        long: "Match Finished",
+                        short: "FT",
+                        elapsed: 90
+                    }
+                },
+                league: {
+                    id: 39,
+                    name: "Premier League",
+                    country: "England",
+                    logo: "https://media.api-sports.io/football/leagues/39.png",
+                    flag: "https://media.api-sports.io/flags/gb.svg",
+                    season: 2021,
+                    round: "Regular Season - 27"
+                },
+                teams: {
+                    home: {
+                        id: 51,
+                        name: "Brighton",
+                        logo: "https://media.api-sports.io/football/teams/51.png",
+                        winner: false
+                    },
+                    away: {
+                        id: 66,
+                        name: "Aston Villa",
+                        logo: "https://media.api-sports.io/football/teams/66.png",
+                        winner: true
+                    }
+                },
+                goals: {
+                    home: 0,
+                    away: 2
+                },
+                score: {
+                    halftime: {
+                        home: 0,
+                        away: 1
+                    },
+                    fulltime: {
+                        home: 0,
+                        away: 2
+                    },
+                    extratime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    penalty: {
+                        home: "NULL",
+                        away: "NULL"
+                    }
+                }
+            },
+            {
+                fixture: {
+                    id: 710819,
+                    referee: "NULL",
+                    timezone: "UTC",
+                    date: "2022-02-27T14:00:00+00:00",
+                    timestamp: 1645970400,
+                    periods: {
+                        first: "NULL",
+                        second: "NULL",
+                    },
+                    venue: {
+                        id: 519,
+                        name: "Stamford Bridge",
+                        city: "London"
+                    },
+                    status: {
+                        long: "Match Postponed",
+                        short: "PST",
+                        elapsed: "NULL"
+                    }
+                },
+                league: {
+                    id: 39,
+                    name: "Premier League",
+                    country: "England",
+                    logo: "https://media.api-sports.io/football/leagues/39.png",
+                    flag: "https://media.api-sports.io/flags/gb.svg",
+                    season: 2021,
+                    round: "Regular Season - 27"
+                },
+                teams: {
+                    home: {
+                        id: 49,
+                        name: "Chelsea",
+                        logo: "https://media.api-sports.io/football/teams/49.png",
+                        winner: "NULL"
+                    },
+                    away: {
+                        id: 46,
+                        name: "Leicester",
+                        logo: "https://media.api-sports.io/football/teams/46.png",
+                        winner: "NULL"
+                    }
+                },
+                goals: {
+                    home: "NULL",
+                    away: "NULL"
+                },
+                score: {
+                    halftime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    fulltime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    extratime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    penalty: {
+                        home: "NULL",
+                        away: "NULL"}
+                }
+            }
+
+        ];
+        return { teams: teams, fixtures: fixtures, results: results };
     }
 
 

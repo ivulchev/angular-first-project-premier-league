@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TablesComponent } from './tables/tables.component';
 import { FixturesComponent } from './fixtures/fixtures.component';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TablesComponent,
-    FixturesComponent
+    FixturesComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
