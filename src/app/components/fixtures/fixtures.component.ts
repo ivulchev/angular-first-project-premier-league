@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Fixture } from '../fixture';
-import { FixtureService } from '../services/fixture.service';
+import { Fixture } from '../../fixture';
+import { FixtureService } from '../../services/fixture.service';
 
 @Component({
   selector: 'app-tables',

@@ -18,7 +18,7 @@
     <tbody>
         <tr *ngFor="let team of teams">
             <th scope="row">{{team.rank}}</th>
-            <td><a href="#">
+            <td><a routerLink="/details/{{team.team.id}}">
                     <img src="{{team.team.logo}}" />
                     <span class="team--name">{{team.team.name}}</span>
                 </a>

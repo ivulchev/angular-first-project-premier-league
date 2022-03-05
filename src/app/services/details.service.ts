@@ -4,13 +4,13 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Observable, of } from 'rxjs';
 
-import { Team } from '../team';
+import { Details } from '../details';
 import { MessageService } from './message.service';
 
 @Injectable({ providedIn: 'root' })
-export class TeamService {
+export class DetailsService {
 
-  private teamsUrl = 'api/teams';  // URL to web api
+  private teamsUrl = 'api/details';  // URL to web api
 
   constructor(
     private http: HttpClient,
@@ -18,24 +18,24 @@ export class TeamService {
 
   /** GET heroes from the server */
   /** GET heroes from the server */
-  getTeams(): Observable<Team[]> {
-    return this.http.get<Team[]>(this.teamsUrl)
+  getTeams(): Observable<Details[]> {
+    return this.http.get<Details[]>(this.teamsUrl)
       .pipe(
         tap(_ => this.log('fetched teams')),
-        catchError(this.handleError<Team[]>('getTeams', []))
+        catchError(this.handleError<Details[]>('getTeams', []))
       );
   }
 
-  getTeam(id: number): Observable<Team> {
+  getTeam(id: number): Observable<Details> {
     const url = `${this.teamsUrl}/${id}`;
-    return this.http.get<Team>(url).pipe(
+    return this.http.get<Details>(url).pipe(
       tap(_ => this.log(`fetched team id=${id}`)),
-      catchError(this.handleError<Team>(`getTeam id=${id}`))
+      catchError(this.handleError<Details>(`getTeam id=${id}`))
     );
   }
 
    /** PUT: update the hero on the server */
-  updateTeam(team: Team): Observable<any> {
+  updateTeam(team: Details): Observable<any> {
     return this.http.put(this.teamsUrl, team, this.httpOptions).pipe(
       tap(_ => this.log(`updated team id=${team.team.id}`)),
       catchError(this.handleError<any>('updateTeam'))

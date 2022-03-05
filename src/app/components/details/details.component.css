@@ -1,0 +1,43 @@
+.short--info{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 80px;
+    background-image: linear-gradient(to bottom, #270806, #4b0d12, #730c18, #9c071a, #c60218, #c60218, #c60218, #c60218, #9c071a, #730c18, #4b0d12, #270806);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.short--info .logo{
+    width: 10%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 100%;
+}
+
+.short--info .stadium--photo{
+    width: 25%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+
+.wrapper h2{
+    font-size: 45px;
+    color:white;
+    font-weight: 700;
+}
+
+
+
+.short--info.MUN{
+    background-image: linear-gradient(to bottom, #270806, #4b0d12, #730c18, #9c071a, #c60218, #c60218, #c60218, #c60218, #9c071a, #730c18, #4b0d12, #270806);
+}
+
+.short--info.CHE{
+    background-image: linear-gradient(to bottom,  #032c64, #0a4595, #032c64);
+}

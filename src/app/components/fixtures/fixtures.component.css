@@ -7,30 +7,37 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
 }
 
 .fixture--article{
     display: flex;
     width: 550px;
-    color: white;
+    color: black;
     padding: 10px 20px;
     font-weight: 500;
-    background-image: linear-gradient(to right, #105bcd, #105bcd, #105bcd, #e22fa1, #ff2882);
+    background-color: white;
     align-items: center;
     justify-content: space-between;
+    box-shadow: -14px 13px 15px 5px #000000; 
 }
 .fixture--article:hover{
     transition: all 150ms ease-in-out;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
+    color: white;
+    background-image: linear-gradient(to right, #105bcd, #105bcd, #105bcd, #e22fa1, #ff2882);
+    
+}
+
+.fixture--article:hover a{
+    transition: all 150ms ease-in-out;
+    color: white;
+    
 }
 .fixture--article a{
     display: flex;
     text-decoration: none;
     font-weight: 500;
-    color: white;
+    color: black;
     align-items: center;
 }
 

@@ -6,16 +6,18 @@ import { InMemoryDataService } from './services/in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TablesComponent } from './tables/tables.component';
-import { FixturesComponent } from './fixtures/fixtures.component';
-import { ResultsComponent } from './results/results.component';
+import { TablesComponent } from './components/tables/tables.component';
+import { FixturesComponent } from './components/fixtures/fixtures.component';
+import { ResultsComponent } from './components/results/results.component';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TablesComponent,
     FixturesComponent,
-    ResultsComponent
+    ResultsComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

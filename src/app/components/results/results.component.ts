@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Results } from '../results';
-import { ResultsService } from '../services/results.service';
+import { Results } from '../../results';
+import { ResultsService } from '../../services/results.service';
 
 @Component({
   selector: 'app-tables',

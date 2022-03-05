@@ -1,0 +1,23 @@
+<section class="team--details" *ngIf="team">
+    <article class="short--info {{team.team.code}}">
+        <img class="logo" src="{{team.team.logo}}" />
+        <div class="wrapper">
+            <h2> {{team.team.name}}</h2>
+            <span>
+                Year of foundation: {{team.team.founded}}
+            </span>
+            <span>
+                Stadium: {{team.venue.name}}
+            </span>
+            <span>
+                Capacity: {{team.venue.capacity}}
+            </span>
+            <span>
+                City: {{team.venue.city}}
+            </span>
+        </div>
+        <img class="stadium--photo"src="{{team.venue.image}}" />
+    </article>
+
+
+</section>
