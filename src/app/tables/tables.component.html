@@ -18,9 +18,10 @@
     <tbody>
         <tr *ngFor="let team of teams">
             <th scope="row">{{team.rank}}</th>
-            <td>
+            <td><a href="#">
                     <img src="{{team.team.logo}}" />
                     <span class="team--name">{{team.team.name}}</span>
+                </a>
                 </td>
             <td>
                 {{team.all.played}}

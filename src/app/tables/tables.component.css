@@ -1,11 +1,9 @@
 
-
-
-
 table{
     width: 90%;
-    margin: 2.5% 5%;
-    font-family: 'Roboto Slab', serif;
+    margin: 2.5% 0;
+    margin-left: 8.5%;
+    font-family: 'PremierSans-Regular',Arial,'Helvetica Neue',Helvetica,sans-serif;
     display: inline-block;
     border-collapse: collapse;
     overflow: hidden;
@@ -24,23 +22,29 @@ table{
 
 tbody td,
 tbody th,
-thead th{
+thead th,
+tbody a{
     font-weight: 700;
     padding: 1%;
     min-width: 100px;
-    line-height: 1.0rem;
+    line-height: 1.5rem;
     text-align: center;
-
+    align-items: center;
 }
 
 tbody img{
-    width: 50px;
+    width: 42px;
+    position: absolute;
+    top: -5px;
+    left: -45px;
 }
 tbody a{
-    display: flex;
-    gap: 10px;
-    align-items: center;
+    display: block;
+    padding-left: 10px ;
+    position: relative;
+    min-width: 100px;
     text-align: left;
     text-decoration: none;
     color: #333;
+
 }
