@@ -4,13 +4,13 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Observable, of } from 'rxjs';
 
-import { Fixture } from './fixture';
+import { Team } from '../team';
 import { MessageService } from './message.service';
 
 @Injectable({ providedIn: 'root' })
-export class FixtureService {
+export class TeamService {
 
-  private fixturesUrl = 'api/fixtures';  // URL to web api
+  private teamsUrl = 'api/teams';  // URL to web api
 
   constructor(
     private http: HttpClient,
@@ -18,11 +18,11 @@ export class FixtureService {
 
   /** GET heroes from the server */
   /** GET heroes from the server */
-  getFixtures(): Observable<Fixture[]> {
-    return this.http.get<Fixture[]>(this.fixturesUrl)
+  getTeams(): Observable<Team[]> {
+    return this.http.get<Team[]>(this.teamsUrl)
       .pipe(
-        tap(_ => this.log('fetched fixtures')),
-        catchError(this.handleError<Fixture[]>('getTeams', []))
+        tap(_ => this.log('fetched teams')),
+        catchError(this.handleError<Team[]>('getTeams', []))
       );
   }
 
@@ -34,7 +34,7 @@ export class FixtureService {
 
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`FixtureService: ${message}`);
+    this.messageService.add(`TeamService: ${message}`);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

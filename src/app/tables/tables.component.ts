@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Team } from '../team';
-import { TeamService } from '../team.service';
+import { TeamService } from '../services/team.service';
 
 @Component({
   selector: 'app-tables',
