@@ -1,1 +1,55 @@
-<p>tables works!</p>
+<table class="calendar">
+    <div class="logo"></div>
+    <thead>
+        <tr>
+            <th scope="col">POS</th>
+            <th scope="col">TEAM</th>
+            <th scope="col">MP</th>
+            <th scope="col">W</th>
+            <th scope="col">D</th>
+            <th scope="col">L</th>
+            <th scope="col">GF</th>
+            <th scope="col">GA</th>
+            <th scope="col">GD</th>
+            <th scope="col">Points</th>
+            <th scope="col">Form</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let team of teams">
+            <th scope="row">{{team.rank}}</th>
+            <td>
+                    <img src="{{team.team.logo}}" />
+                    <span class="team--name">{{team.team.name}}</span>
+                </td>
+            <td>
+                {{team.all.played}}
+            </td>
+            <td>
+                {{team.all.win}}
+            </td>
+            <td>
+                {{team.all.draw}}
+            </td>
+            <td>
+                {{team.all.lose}}
+            </td>
+            <td>
+                {{team.all.goals.for}}
+            </td>
+            <td>
+                {{team.all.goals.against}}
+            </td>
+            <td>
+                {{team.goalsDiff}}
+            </td>
+            <td>
+                {{team.points}}
+            </td>
+            <td>
+                {{team.form}}
+            </td>
+        </tr>
+    </tbody>
+
+</table>

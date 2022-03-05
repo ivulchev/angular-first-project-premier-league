@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Team } from '../team';
+import { TeamService } from '../team.service';
+
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablesComponent implements OnInit {
 
-  constructor() { }
+  teams: Team[] = [];
+
+  constructor(private teamService: TeamService) { }
 
   ngOnInit(): void {
+    this.getTeams();
+  }
+
+  getTeams(): void {
+    this.teamService.getTeams()
+    .subscribe(teams => this.teams = teams);
   }
 
 }

@@ -1,0 +1,46 @@
+
+
+
+
+table{
+    width: 90%;
+    margin: 2.5% 5%;
+    font-family: 'Roboto Slab', serif;
+    display: inline-block;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+
+.logo{
+    content: " ";
+    background: url("https://www.premierleague.com/resources/prod/89ca2b2-3842/i/sprites/global-sprite.png") -227px -366px no-repeat;
+    width: 170px;
+    height: 28px;
+    display: block;
+    margin-left: 35px;
+    margin-bottom: 20px;
+}
+
+tbody td,
+tbody th,
+thead th{
+    font-weight: 700;
+    padding: 1%;
+    min-width: 100px;
+    line-height: 1.0rem;
+    text-align: center;
+
+}
+
+tbody img{
+    width: 50px;
+}
+tbody a{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: left;
+    text-decoration: none;
+    color: #333;
+}
