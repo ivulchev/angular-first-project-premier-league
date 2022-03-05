@@ -7,11 +7,13 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TablesComponent } from './tables/tables.component';
+import { FixturesComponent } from './fixtures/fixtures.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TablesComponent
+    TablesComponent,
+    FixturesComponent
   ],
   imports: [
     BrowserModule,
