@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+
+header{
+    position: sticky;
+}
+
+
+/* TOP NAVIGATION */
+
+.top--nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.top--nav a img{
+    width: 70%;
+    margin: 10%;
+    transition: all 100ms ease-in-out;
+}
+
+.top--nav a img:hover{
+    width: 90%;
+    margin: 0%;
+}
+
+.top--nav ul{
+    margin-left: 50px;
+}
+.top--nav ul li{
+    display: inline-block;
+    
+}
+
+.home--link{
+    position: absolute;
+    left: 150px;
+    width: 60px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.home--link:hover{
+    width: 70px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+/* MAIN NAVIGATION */
+.main--nav{
+    width: 100%;
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    line-height: 0.4;
+    padding: 20px 0;
+}
+
+.main--nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 45px;
+}
+.main--nav ul li{
+    display: flex;
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin: 2px 2px;
+    text-decoration: none;
+    color: white;;
+}
+
+.main--nav ul li a{
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin: 2px 2px;
+    text-decoration: none;
+    color: white;
+}
+
+.main--nav ul li a:hover{
+    transition: all 150ms ease-in-out;
+    color: #93b0de;
+    font-size: 24px;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    margin-top: 15px;
+}
