@@ -9,7 +9,7 @@ import { Team } from './team';
 @Injectable({ providedIn: 'root' })
 export class TeamService {
 
-  private teamsUrl = 'api/teams';  // URL to web api
+  private teamsUrl = 'http://localhost:3030/table';  // URL to web api
 
   constructor(
     private http: HttpClient) { }
