@@ -1,1 +1,13 @@
-<p>fixtures works!</p>
+<section class="fixtures--section">
+    <ul class="fixtures">
+        <li *ngFor="let fixture of fixtures">
+            <article class="fixture--article">
+                <span>{{fixture.fixture.date.slice(5, 10).replace("-", "/")}}</span>
+                <a href="#"> {{fixture.teams.home.name}} <img src="{{fixture.teams.home.logo}}"/></a>
+                <time>{{fixture.fixture.date.slice(11, 16)}}</time>
+                <a href="#"><img src="{{fixture.teams.away.logo}}"/> {{fixture.teams.away.name}}</a> 
+                <img class="premier--logo"src="{{fixture.league.logo}}"/><span>{{fixture.fixture.status.long}}</span>
+            </article>
+        </li>
+    </ul>
+</section>

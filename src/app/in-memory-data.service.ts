@@ -397,8 +397,215 @@ export class InMemoryDataService implements InMemoryDbService {
                 }
             }
         ];
-        return { teams };
+        const fixtures = [
+            {
+                fixture: {
+                    id: 710826,
+                    referee: "Peter Bankes, England",
+                    timezone: "UTC",
+                    date: "2022-03-05T15:00:00+00:00",
+                    timestamp: 1646492400,
+                    periods: {
+                        first: "NULL",
+                        second: "NULL",
+                    },
+                    venue: {
+                        id: 495,
+                        name: "Villa Park",
+                        city: "Birmingham"
+                    },
+                    status: {
+                        long: "Not Started",
+                        short: "NS",
+                        elapsed: "NULL",
+                    }
+                },
+                league: {
+                    id: 39,
+                    name: "Premier League",
+                    country: "England",
+                    logo: "https://media.api-sports.io/football/leagues/39.png",
+                    flag: "https://media.api-sports.io/flags/gb.svg",
+                    season: 2021,
+                    round: "Regular Season - 28",
+                },
+                teams: {
+                    home: {
+                        id: 66,
+                        name: "Aston Villa",
+                        logo: "https://media.api-sports.io/football/teams/66.png",
+                        winner: "NULL"
+                    },
+                    away: {
+                        id: 41,
+                        name: "Southampton",
+                        logo: "https://media.api-sports.io/football/teams/41.png",
+                        winner: "NULL"
+                    }
+                },
+                goals: {
+                    home: "NULL",
+                    away: "NULL"
+                },
+                score: {
+                    halftime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    fulltime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    extratime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    penalty: {
+                        home: "NULL",
+                        away: "NULL"
+                    }
+                }
+            },
+            {
+                fixture: {
+                    id: 710827,
+                    referee: "Andre Marriner, England",
+                    timezone: "UTC",
+                    date: "2022-03-05T15:00:00+00:00",
+                    timestamp: 1646492400,
+                    periods: {
+                        first: "NULL",
+                        second: "NULL"
+                    },
+                    venue: {
+                        id: 512,
+                        name: "Turf Moor",
+                        city: "Burnley"
+                    },
+                    status: {
+                        long: "Not Started",
+                        short: "NS",
+                        elapsed: "NULL"
+                    }
+                },
+                league: {
+                    id: 39,
+                    name: "Premier League",
+                    country: "England",
+                    logo: "https://media.api-sports.io/football/leagues/39.png",
+                    flag: "https://media.api-sports.io/flags/gb.svg",
+                    season: 2021,
+                    round: "Regular Season - 28"
+                },
+                teams: {
+                    home: {
+                        id: 44,
+                        name: "Burnley",
+                        logo: "https://media.api-sports.io/football/teams/44.png",
+                        winner: "NULL"
+                    },
+                    away: {
+                        id: 49,
+                        name: "Chelsea",
+                        logo: "https://media.api-sports.io/football/teams/49.png",
+                        winner: "NULL"
+                    }
+                },
+                goals: {
+                    home: "NULL",
+                    away: "NULL"
+                },
+                    score: {
+                    halftime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    fulltime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    extratime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    penalty: {
+                        home: "NULL",
+                        away: "NULL"
+                    }
+                }
+            },
+            {
+                fixture: {
+                    id: 710826,
+                    referee: "Peter Bankes, England",
+                    timezone: "UTC",
+                    date: "2022-03-05T15:00:00+00:00",
+                    timestamp: 1646492400,
+                    periods: {
+                        first: "NULL",
+                        second: "NULL",
+                    },
+                    venue: {
+                        id: 495,
+                        name: "Villa Park",
+                        city: "Birmingham"
+                    },
+                    status: {
+                        long: "Not Started",
+                        short: "NS",
+                        elapsed: "NULL",
+                    }
+                },
+                league: {
+                    id: 39,
+                    name: "Premier League",
+                    country: "England",
+                    logo: "https://media.api-sports.io/football/leagues/39.png",
+                    flag: "https://media.api-sports.io/flags/gb.svg",
+                    season: 2021,
+                    round: "Regular Season - 28",
+                },
+                teams: {
+                    home: {
+                        id: 66,
+                        name: "Aston Villa",
+                        logo: "https://media.api-sports.io/football/teams/66.png",
+                        winner: "NULL"
+                    },
+                    away: {
+                        id: 41,
+                        name: "Southampton",
+                        logo: "https://media.api-sports.io/football/teams/41.png",
+                        winner: "NULL"
+                    }
+                },
+                goals: {
+                    home: "NULL",
+                    away: "NULL"
+                },
+                score: {
+                    halftime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    fulltime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    extratime: {
+                        home: "NULL",
+                        away: "NULL"
+                    },
+                    penalty: {
+                        home: "NULL",
+                        away: "NULL"
+                    }
+                }
+            }
+        ];
+        return { teams: teams, fixtures: fixtures };
     }
+
 
     // Overrides the genId method to ensure that a hero always has an id.
     // If the teams array is empty,

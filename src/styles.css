@@ -1,7 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:wght@300;400;500;700&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -50,22 +47,22 @@ table {
 
 body, button {
 	color: #333;
-	font-family: Cambria, Georgia, serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 h1 {
 	color: #369;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 250%;
 }
 h2, h3 {
 	color: #444;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: lighter;
 }
 
 
   /* everywhere else */
 * {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 }

@@ -15,6 +15,7 @@ header{
     align-items: center;
     justify-content: center;
     padding: 10px 0px;
+    background-image: linear-gradient(to right, #105bcd, #105bcd, #105bcd, #e22fa1, #ff2882);
 }
 
 .top--nav a img{

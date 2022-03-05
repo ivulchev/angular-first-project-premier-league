@@ -1,0 +1,56 @@
+.fixtures--section{
+    padding: 20px 50px;
+}
+
+.fixtures{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.fixture--article{
+    display: flex;
+    width: 550px;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 500;
+    background-image: linear-gradient(to right, #105bcd, #105bcd, #105bcd, #e22fa1, #ff2882);
+    align-items: center;
+    justify-content: space-between;
+}
+.fixture--article:hover{
+    transition: all 150ms ease-in-out;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+.fixture--article a{
+    display: flex;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    align-items: center;
+}
+
+.fixture--article a:hover{
+    transition: all 150ms ease-in-out;
+    color: #24262b;
+}
+
+.fixture--article img{
+    width: 30px;
+    margin: 0 5px;
+}
+
+.fixture--article .premier--logo{
+    width: 60px;
+    margin: 0;
+}
+
+.fixture--article time{
+    background-color: white;
+    color: black;
+    padding: 15px;
+}
