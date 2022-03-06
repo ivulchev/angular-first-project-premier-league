@@ -7,12 +7,14 @@ import { Observable, of } from 'rxjs';
 import { Details } from '../details';
 import { MessageService } from './message.service';
 import { Coach } from '../coach';
+import { Players } from '../players';
 
 @Injectable({ providedIn: 'root' })
 export class DetailsService {
 
   private teamsUrl = 'api/details';
-  private coachesUrl = 'api/coaches';  // URL to web api
+  private coachesUrl = 'api/coaches';
+   // URL to web api
 
   constructor(
     private http: HttpClient,
@@ -28,6 +30,7 @@ export class DetailsService {
       );
   }
 
+
   getTeam(id: number): Observable<Details> {
     const url = `${this.teamsUrl}/${id}`;
     return this.http.get<Details>(url).pipe(
@@ -35,6 +38,18 @@ export class DetailsService {
       catchError(this.handleError<Details>(`getTeam id=${id}`))
     );
   }
+
+  getPlayers(id: number): Observable<Players> {
+    let playersUrl = `https://api-football-v1.p.rapidapi.com/v3/players/squads?team=${id}`;
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
+        "x-rapidapi-key": "556f5e858amsh84ff367d8aa60e4p1e7e01jsne580e77a8b45"
+      })
+    };
+    return this.http.get<Players>(playersUrl, httpOptions)
+  }
+
 
   getCoach(id: number): Observable<Coach> {
     const url = `${this.coachesUrl}/${id}`;
@@ -44,7 +59,7 @@ export class DetailsService {
     );
   }
 
-   /** PUT: update the hero on the server */
+  /** PUT: update the hero on the server */
   updateTeam(team: Details): Observable<any> {
     return this.http.put(this.teamsUrl, team, this.httpOptions).pipe(
       tap(_ => this.log(`updated team id=${team.team.id}`)),
@@ -74,4 +89,6 @@ export class DetailsService {
       return of(result as T);
     };
   }
+
+ 
 }

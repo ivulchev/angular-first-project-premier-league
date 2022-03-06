@@ -24,7 +24,7 @@ import { DetailsComponent } from './components/details/details.component';
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
+      InMemoryDataService, {passThruUnknownUrl: true} 
     )
   ],
   providers: [],

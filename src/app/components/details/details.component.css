@@ -60,3 +60,48 @@
     color:white;
     font-weight: 700;
 }
+
+/* PLAYERS */
+.players{
+    padding: 20px;
+}
+.players li{
+    display: inline-block;
+    margin: 10px;
+}
+
+
+.player--card{
+    position: relative;
+    width: 280px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(190, 186, 186);
+}
+
+.player--card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
+
+.player--photo{
+    width: 40%;
+}
+
+.team--logo--card{
+    width: 20%;
+}
+.card--wrapper span{
+    display: block;
+    margin: 5px;
+    font-size: 20px;
+}
