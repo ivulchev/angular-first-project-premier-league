@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 
 import { Details } from '../../details';
 import { DetailsService } from '../../services/details.service';
+import { Coach } from 'src/app/coach';
 
 @Component({
   selector: 'app-details',
@@ -12,6 +13,7 @@ import { DetailsService } from '../../services/details.service';
 })
 export class DetailsComponent implements OnInit {
   team: Details | undefined;
+  coach: Coach | undefined;
 
   constructor(private route: ActivatedRoute,
     private teamService: DetailsService,
@@ -19,7 +21,7 @@ export class DetailsComponent implements OnInit {
 
     ngOnInit(): void {
       this.getTeam();
-      console.log(this.team)
+      this.getCoach();
     }
   
     getTeam(): void {
@@ -28,15 +30,21 @@ export class DetailsComponent implements OnInit {
         .subscribe(team => this.team = team);
         
     }
+    getCoach(): void {
+      const id = Number(this.route.snapshot.paramMap.get('id'));
+      this.teamService.getCoach(id)
+        .subscribe(coach => this.coach = coach);
+        
+    }
   
     goBack(): void {
       this.location.back();
     }
   
-    save(): void {
-      if (this.team) {
-        this.teamService.updateTeam(this.team)
-          .subscribe(() => this.goBack());
-      }
-    }
+    // save(): void {
+    //   if (this.team) {
+    //     this.teamService.updateTeam(this.team)
+    //       .subscribe(() => this.goBack());
+    //   }
+    // }
 }

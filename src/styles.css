@@ -55,10 +55,9 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 250%;
 }
-h2, h3 {
+h2, h3, h4 {
 	color: #444;
 	font-family: 'Roboto', sans-serif;
-	font-weight: lighter;
 }
 
 

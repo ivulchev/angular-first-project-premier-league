@@ -22,7 +22,7 @@
 .wrapper{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 35px;
     color: white;
 }
 
@@ -33,11 +33,30 @@
 }
 
 
-
+/* COLORS */
 .short--info.MUN{
     background-image: linear-gradient(to bottom, #270806, #4b0d12, #730c18, #9c071a, #c60218, #c60218, #c60218, #c60218, #9c071a, #730c18, #4b0d12, #270806);
 }
 
 .short--info.CHE{
     background-image: linear-gradient(to bottom,  #032c64, #0a4595, #032c64);
+}
+
+.coach--details,
+.coach--details ul{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.coach--details img{
+    width: 30%;
+}
+
+.coach--details h2{
+    font-size: 45px;
+    color:white;
+    font-weight: 700;
 }

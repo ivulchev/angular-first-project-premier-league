@@ -6,11 +6,13 @@ import { Observable, of } from 'rxjs';
 
 import { Details } from '../details';
 import { MessageService } from './message.service';
+import { Coach } from '../coach';
 
 @Injectable({ providedIn: 'root' })
 export class DetailsService {
 
-  private teamsUrl = 'api/details';  // URL to web api
+  private teamsUrl = 'api/details';
+  private coachesUrl = 'api/coaches';  // URL to web api
 
   constructor(
     private http: HttpClient,
@@ -31,6 +33,14 @@ export class DetailsService {
     return this.http.get<Details>(url).pipe(
       tap(_ => this.log(`fetched team id=${id}`)),
       catchError(this.handleError<Details>(`getTeam id=${id}`))
+    );
+  }
+
+  getCoach(id: number): Observable<Coach> {
+    const url = `${this.coachesUrl}/${id}`;
+    return this.http.get<Coach>(url).pipe(
+      tap(_ => this.log(`fetched coach id=${id}`)),
+      catchError(this.handleError<Coach>(`getCoach id=${id}`))
     );
   }
 

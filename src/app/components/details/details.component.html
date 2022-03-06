@@ -1,6 +1,25 @@
 <section class="team--details" *ngIf="team">
     <article class="short--info {{team.team.code}}">
         <img class="logo" src="{{team.team.logo}}" />
+        <div class="coach--details" *ngIf="coach">
+            <h2> {{coach.firstname}} {{coach.lastname}}</h2>
+            <img class="coach--photo" src="{{coach.photo}}" />
+            <span>
+                Nationality: {{coach.nationality}}
+            </span>
+            <span>
+                Age: {{coach.age}}
+            </span>
+            <span>
+                Joined club:  {{coach.career[0].start}}
+            </span>
+            <!-- <ul>
+                <span>Previuos Teams:</span>
+                <li *ngFor="let career of coach.career" >
+                   <span>{{career.team.name === team.team.name ? null : career.team.name + " :"}} {{career.team.name === team.team.name ? null : career.start + " - "}}  {{career.team.name === team.team.name ? null : career.end}}</span>
+                </li>
+            </ul> -->
+        </div>
         <div class="wrapper">
             <h2> {{team.team.name}}</h2>
             <span>

@@ -1791,29 +1791,171 @@ export class InMemoryDataService implements InMemoryDbService {
                 }
             },
             {
-            id:49,
-            team:{
-                id:49,
-                name:"Chelsea",
-                code:"CHE",
-                country:"England",
-                founded:1905,
-                national:false,
-                logo:"https://media.api-sports.io/football/teams/49.png"
+                id: 49,
+                team: {
+                    id: 49,
+                    name: "Chelsea",
+                    code: "CHE",
+                    country: "England",
+                    founded: 1905,
+                    national: false,
+                    logo: "https://media.api-sports.io/football/teams/49.png"
                 },
-                venue:{
-                id:519,
-                name:"Stamford Bridge",
-                address:"Fulham Road",
-                city:"London",
-                capacity:41841,
-                surface:"grass",
-                image:"https://media.api-sports.io/football/venues/519.png"
+                venue: {
+                    id: 519,
+                    name: "Stamford Bridge",
+                    address: "Fulham Road",
+                    city: "London",
+                    capacity: 41841,
+                    surface: "grass",
+                    image: "https://media.api-sports.io/football/venues/519.png"
                 }
             }
 
         ];
-        return { teams: teams, fixtures: fixtures, results: results, details: details };
+        const coaches = [
+
+
+            {
+                id: 49,
+                name: "T. Tuchel",
+                firstname: "Thomas",
+                lastname: "Tuchel",
+                age: 49,
+                birth: {
+                    date: "1973-08-29",
+                    place: "Krumbach",
+                    country: "Germany"
+                },
+                nationality: "Germany",
+                height: "192 cm",
+                weight: "85 kg",
+                photo: "https://media.api-sports.io/football/coachs/40.png",
+                team: {
+                    id: 49,
+                    name: "Chelsea",
+                    logo: "https://media.api-sports.io/football/teams/49.png"
+                },
+                career: [
+                    {
+                        team: {
+                            id: 49,
+                            name: "Chelsea",
+                            logo: "https://media.api-sports.io/football/teams/49.png"
+                        },
+                        start: "2021-01-01",
+                        end: "NULL"
+                    },
+                    {
+                        team: {
+                            id: 85,
+                            name: "PSG",
+                            logo: "https://media.api-sports.io/football/teams/85.png"
+                        },
+                        start: "2018-07-01",
+                        end: "2020-12-01"
+                    },
+                    {
+                        team: {
+                            id: 165,
+                            name: "Borussia Dortmund",
+                            logo: "https://media.api-sports.io/football/teams/165.png"
+                        },
+                        start: "2015-07-01",
+                        end: "2017-05-01"
+                    },
+                    {
+                        team: {
+                            id: "NULL",
+                            name: "Mainz",
+                            logo: "NULL"
+                        },
+                        start: "2009-08-01",
+                        end: "2014-05-01"
+                    }
+                ]
+
+            },
+
+            {
+                id: 33,
+                name: "R. Rangnick",
+                firstname: "Ralf",
+                lastname: "Rangnick",
+                age: 64,
+                birth: {
+                    date: "1958-06-29",
+                    place: "Backnang",
+                    country: "Germany"
+                },
+                nationality: "Germany",
+                height: "NULL",
+                weight: "NULL",
+                photo: "https://media.api-sports.io/football/coachs/3085.png",
+                team: {
+                    id: 33,
+                    name: "Manchester United",
+                    logo: "https://media.api-sports.io/football/teams/33.png"
+                },
+                career: [
+                    {
+                        team: {
+                            id: 33,
+                            name: "Manchester United",
+                            logo: "https://media.api-sports.io/football/teams/33.png"
+                        },
+                        start: "2021-12-01",
+                        end: "NULL"
+                    },
+                    {
+                        team: {
+                            id: 173,
+                            name: "RB Leipzig",
+                            logo: "https://media.api-sports.io/football/teams/173.png"
+                        },
+                        start: "2018-07-01",
+                        end: "2019-06-01"
+                    },
+                    {
+                        team: {
+                            id: 173,
+                            name: "RB Leipzig",
+                            logo: "https://media.api-sports.io/football/teams/173.png"
+                        },
+                        start: "2015-07-01",
+                        end: "2016-06-01"
+                    },
+                    {
+                        team: {
+                            id: 174,
+                            name: "Schalke 04",
+                            logo: "https://media.api-sports.io/football/teams/174.png"
+                        },
+                        start: "2011-03-01",
+                        end: "2011-09-01"
+                    },
+                    {
+                        team: {
+                            id: 167,
+                            name: "Hoffenheim",
+                            logo: "https://media.api-sports.io/football/teams/167.png"
+                        },
+                        start: "2006-07-01",
+                        end: "2011-01-01"
+                    },
+                    {
+                        team: {
+                            id: 174,
+                            name: "Schalke 04",
+                            logo: "https://media.api-sports.io/football/teams/174.png"
+                        },
+                        start: "2004-09-01",
+                        end: "2005-12-01"
+                    }
+                ]
+            }
+        ];
+        return { teams: teams, fixtures: fixtures, results: results, details: details, coaches: coaches };
     }
 
 
