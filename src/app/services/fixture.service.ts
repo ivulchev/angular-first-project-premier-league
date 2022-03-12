@@ -4,7 +4,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Observable, of } from 'rxjs';
 
-import { Fixture } from '../fixture';
+import { Fixture } from '../interfaces/fixture';
 import { MessageService } from './message.service';
 
 @Injectable({ providedIn: 'root' })

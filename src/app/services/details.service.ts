@@ -4,10 +4,10 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Observable, of } from 'rxjs';
 
-import { Details } from '../details';
+import { Details } from '../interfaces/details';
 import { MessageService } from './message.service';
-import { Coach } from '../coach';
-import { Players } from '../players';
+import { Coach } from '../interfaces/coach';
+import { Players } from '../interfaces/players';
 
 @Injectable({ providedIn: 'root' })
 export class DetailsService {

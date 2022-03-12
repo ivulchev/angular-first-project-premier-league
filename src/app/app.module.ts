@@ -10,6 +10,11 @@ import { TablesComponent } from './components/tables/tables.component';
 import { FixturesComponent } from './components/fixtures/fixtures.component';
 import { ResultsComponent } from './components/results/results.component';
 import { DetailsComponent } from './components/details/details.component';
+import { HomeComponent } from './components/home/home.component';
+import { PostsComponent } from './components/posts/posts.component';
+import { MyPostsComponent } from './components/my-posts/my-posts.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { DetailsComponent } from './components/details/details.component';
     TablesComponent,
     FixturesComponent,
     ResultsComponent,
-    DetailsComponent
+    DetailsComponent,
+    HomeComponent,
+    PostsComponent,
+    MyPostsComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

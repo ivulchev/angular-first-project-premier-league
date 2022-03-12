@@ -53,6 +53,7 @@
 
 .coach--details img{
     width: 30%;
+    border-radius: 100%;
 }
 
 .coach--details h2{
@@ -67,29 +68,49 @@
 }
 .players li{
     display: inline-block;
-    margin: 10px;
+    
 }
 
 
 .player--card{
+    border-radius: 12px;
     position: relative;
     width: 280px;
     padding: 10px;
+    margin: 12px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(190, 186, 186);
+    background-color: white;
+    box-shadow: -16px 9px 29px 11px rgba(0,0,0,0.4);
 }
 
-.player--card::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    opacity: 0.5;
+.player--card:hover{
+    margin: 0;
+    width: 304px;
+}
+
+.upper-wrapper span{
+    display: block;
+    text-align: center;
+}
+
+.player--name--card{
+    display: block;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+}
+.upper-wrapper{
+    display: flex;
+    flex-direction:row;
+}
+
+.bottom-wrapper span{
+    display: block;
+    font-weight: 500;
+    text-align: center;
+    margin: 10px 0;
 }
 
 
@@ -98,10 +119,6 @@
 }
 
 .team--logo--card{
-    width: 20%;
-}
-.card--wrapper span{
-    display: block;
-    margin: 5px;
-    font-size: 20px;
+    width: 30%;
+    margin:10px
 }

@@ -36,11 +36,16 @@
     <ul *ngFor="let item of players.response">
         <li *ngFor="let sec of item.players">
             <article class="player--card">
-                <img class="player--photo" src="{{sec.photo}}" />
-                <div class="card--wrapper">
-                    <img class="team--logo--card" src="{{item.team.logo}}" />
-                    <span class="player--name--card">{{sec.name}}</span>
-                    <span class="player--position--card">{{sec.position}}</span>
+                <div class="upper-wrapper">
+                    <div>
+                        <img class="team--logo--card" src="{{item.team.logo}}" />
+                        <span class="player--name--card">{{sec.name}}</span>
+                    </div>
+                    <img class="player--photo" src="{{sec.photo}}" />
+                    
+                </div>
+                <div class="bottom-wrapper">
+                    <span class="player--position--card">Position: {{sec.position}}</span>
                     <span class="player--number--card">Number: {{sec.number}}</span>
                     <span class="player--age--card">Age: {{sec.age}}</span>
                 </div>

@@ -4,7 +4,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Observable, of } from 'rxjs';
 
-import { Results } from '../results';
+import { Results } from '../interfaces/results';
 import { MessageService } from './message.service';
 
 @Injectable({ providedIn: 'root' })

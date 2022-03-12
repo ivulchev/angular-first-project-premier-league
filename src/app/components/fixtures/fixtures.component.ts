@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Fixture } from '../../fixture';
+import { Fixture } from '../../interfaces/fixture';
 import { FixtureService } from '../../services/fixture.service';
 
 @Component({

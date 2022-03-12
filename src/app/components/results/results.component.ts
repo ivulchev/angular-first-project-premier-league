@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Results } from '../../results';
+import { Results } from '../../interfaces/results';
 import { ResultsService } from '../../services/results.service';
 
 @Component({

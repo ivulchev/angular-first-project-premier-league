@@ -1,0 +1,77 @@
+
+.login-register--form{
+    display: inline-block;
+    width: 30%;
+    background-image: url("https://i1.sndcdn.com/artworks-000176310925-twf5ow-t500x500.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 30%;
+    margin-top: 2.5%;
+    padding: 1%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-register--form h1{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-weight: 700;
+    font-size: 150%;
+    color: black;
+}
+
+.login-register--form p{
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    font-size: 80%;
+    color: gray;
+}
+
+.login-register--form .label{
+    font-weight: 500;
+    font-size: 120%;
+    margin: 5% 5%;
+    color: black;
+}
+
+.login-register--form input,
+.submit--btn{
+    width: 90%;
+    height: 30px;
+    margin: 0 5%;
+}
+
+.submit--btn{
+    margin-top: 5%;
+}
+.not--member{
+    margin: 5%;
+}
+
+.submit--btn{
+    color: white;
+    background-color: rgb(42, 42, 236);
+    border:0.2em solid rgba(255,255,255,0);
+    padding: 1%;
+    font-size: 90%;
+    border-radius: 6px;
+}
+
+
+@media screen and (max-width: 780px) {
+    .login-register--form{
+        width: 70%;
+        margin: 30% 15%;
+    
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .login-register--form{
+        width: 80%;
+        margin: 30% 10%;
+    
+    }
+}

@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Details } from '../../details';
+import { Details } from '../../interfaces/details';
 import { DetailsService } from '../../services/details.service';
-import { Coach } from 'src/app/coach';
-import { Players } from 'src/app/players';
+import { Coach } from 'src/app/interfaces/coach';
+import { Players } from 'src/app/interfaces/players';
 
 @Component({
   selector: 'app-details',
