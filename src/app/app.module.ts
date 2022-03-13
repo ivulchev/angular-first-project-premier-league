@@ -4,7 +4,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 
+import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireAuthModule} from '@angular/fire/compat/auth';
+import { firebaseUiAuthConfig } from './firebaseInit/firebaseUiAuthConfig';
+import { environment } from './firebaseInit/environment';
+
 import { AppRoutingModule } from './app-routing.module';
+
+
 import { AppComponent } from './app.component';
 import { TablesComponent } from './components/tables/tables.component';
 import { FixturesComponent } from './components/fixtures/fixtures.component';
@@ -35,9 +43,18 @@ import { RegisterComponent } from './components/register/register.component';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {passThruUnknownUrl: true} 
-    )
+    ),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    FirebaseUIModule.forRoot(firebaseUiAuthConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
+
+  
 })
-export class AppModule { }
+export class AppModule { 
+
+  
+}
+

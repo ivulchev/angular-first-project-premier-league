@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 
+@import '~firebaseui/dist/firebaseui.css';
+
 
 header{
     position: sticky;
@@ -36,6 +38,7 @@ header{
     display: inline-block;
     
 }
+
 
 .home--link{
     position: absolute;
@@ -84,7 +87,13 @@ header{
     font-size: 22px;
     margin: 2px 2px;
     text-decoration: none;
-    color: white;;
+    color: white;
+    cursor: pointer;
+}
+.auth-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
 }
 
 .main--nav ul li a{
