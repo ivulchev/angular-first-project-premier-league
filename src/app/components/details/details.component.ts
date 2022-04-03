@@ -14,7 +14,7 @@ import { Players } from 'src/app/interfaces/players';
 })
 export class DetailsComponent implements OnInit {
   team: Details | undefined;
-  coach: Coach | undefined;
+  // coach: Coach | undefined;
   players: Players | undefined;
 
   constructor(private route: ActivatedRoute,
@@ -23,7 +23,7 @@ export class DetailsComponent implements OnInit {
 
     ngOnInit(): void {
       this.getTeam();
-      this.getCoach();
+      // this.getCoach();
       this.getPlayers();
     }
   
@@ -31,13 +31,13 @@ export class DetailsComponent implements OnInit {
       const id = Number(this.route.snapshot.paramMap.get('id'));
       this.teamService.getTeam(id)
         .subscribe(team => this.team = team);
-        
+
     }
-    getCoach(): void {
-      const id = Number(this.route.snapshot.paramMap.get('id'));
-      this.teamService.getCoach(id)
-        .subscribe(coach => this.coach = coach);
-    }
+    // getCoach(): void {
+    //   const id = Number(this.route.snapshot.paramMap.get('id'));
+    //   this.teamService.getCoach(id)
+    //     .subscribe(coach => this.coach = coach);
+    // }
 
     getPlayers(): void {
       const id = Number(this.route.snapshot.paramMap.get('id'));

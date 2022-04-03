@@ -10,7 +10,7 @@ import { TeamService } from '../../services/team.service';
 })
 export class TablesComponent implements OnInit {
 
-  teams: Team[] = [];
+  teams!: Team;
 
   constructor(private teamService: TeamService) { }
 

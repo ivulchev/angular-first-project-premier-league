@@ -18,12 +18,15 @@ export class FixtureService {
 
   /** GET heroes from the server */
   /** GET heroes from the server */
-  getFixtures(): Observable<Fixture[]> {
-    return this.http.get<Fixture[]>(this.fixturesUrl)
-      .pipe(
-        tap(_ => this.log('fetched fixtures')),
-        catchError(this.handleError<Fixture[]>('getTeams', []))
-      );
+  getFixtures(): Observable<Fixture> {
+    let fixtureUrl = `https://api-football-v1.p.rapidapi.com/v3/fixtures?league=39&season=2021&next=10`;
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
+        "x-rapidapi-key": "556f5e858amsh84ff367d8aa60e4p1e7e01jsne580e77a8b45"
+      })
+    };
+    return this.http.get<Fixture>(fixtureUrl, httpOptions)
   }
 
 

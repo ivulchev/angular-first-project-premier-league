@@ -18,19 +18,20 @@ export class ResultsService {
 
   /** GET heroes from the server */
   /** GET heroes from the server */
-  getResults(): Observable<Results[]> {
-    return this.http.get<Results[]>(this.resultsUrl)
-      .pipe(
-        tap(_ => this.log('fetched fixtures')),
-        catchError(this.handleError<Results[]>('getResults', []))
-      );
+  getResults(): Observable<Results> {
+    let fixtureUrl = `https://api-football-v1.p.rapidapi.com/v3/fixtures?league=39&season=2021&last=10`;
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
+        "x-rapidapi-key": "556f5e858amsh84ff367d8aa60e4p1e7e01jsne580e77a8b45"
+      })
+    };
+    return this.http.get<Results>(fixtureUrl, httpOptions)
   }
 
 
 
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
+
 
   /** Log a HeroService message with the MessageService */
   private log(message: string) {

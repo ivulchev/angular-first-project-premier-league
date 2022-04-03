@@ -5,7 +5,7 @@ export const environment = {
       authDomain: "premier-league-angular-exam.firebaseapp.com",
       databaseURL: "https://PROJECT_ID.firebaseio.com",
       projectId: "premier-league-angular-exam",
-      storageBucket: "PROJECT_ID.appspot.com",
+      storageBucket: "gs://premier-league-angular-exam.appspot.com",
       messagingSenderId: "SENDER_ID",
       appId: "APP_ID",
     }

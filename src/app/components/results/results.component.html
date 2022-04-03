@@ -1,12 +1,13 @@
 <section class="results--section">
-    <ul class="results">
-        <li *ngFor="let result of results">
+    <ul class="results" *ngIf="results">
+        <li *ngFor="let result of results.response">
             <article class="result--article">
                 <span>{{result.fixture.date.slice(5, 10).replace("-", "/")}}</span>
                 <a href="#"> {{result.teams.home.name}} <img src="{{result.teams.home.logo}}"/></a>
                 <time>{{result.goals.home == "NULL" ? "-" : result.goals.home}} : {{result.goals.away == "NULL" ? "-" : result.goals.away}}</time>
                 <a href="#"><img src="{{result.teams.away.logo}}"/> {{result.teams.away.name}}</a> 
-                <img class="premier--logo"src="{{result.league.logo}}"/><span>{{result.fixture.status.long}}</span>
+                <img class="premier--logo"src="https://media.api-sports.io/football/leagues/39.png"/>
+                <span>{{result.fixture.status.long}}</span>
                 <div class="additional">
                     <span>Halftime: {{result.score.halftime.home === "NULL" ? "-" : result.score.halftime.home }} : {{result.score.halftime.away === "NULL" ? "-" : result.score.halftime.away }}</span>
                     <span>Stadium: {{result.fixture.venue.name}}, {{result.fixture.venue.city}} </span>

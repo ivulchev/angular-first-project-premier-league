@@ -1964,7 +1964,7 @@ export class InMemoryDataService implements InMemoryDbService {
     // the method below returns the initial number (11).
     // if the teams array is not empty, the method below returns the highest
     // hero id + 1.
-    genId(teams: Team[]): number {
-        return teams.length > 0 ? Math.max(...teams.map(team => team.team.id)) + 1 : 11;
-    }
+    // genId(teams: Team[]): number {
+    //     return teams.length > 0 ? Math.max(...teams.map(team => team.team.id)) + 1 : 11;
+    // }
 }

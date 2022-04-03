@@ -10,7 +10,7 @@ import { ResultsService } from '../../services/results.service';
 })
 export class ResultsComponent implements OnInit {
 
-  results: Results[] = [];
+  results!: Results;
 
   constructor(private resultsService: ResultsService) { }
 

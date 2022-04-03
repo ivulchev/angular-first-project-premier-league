@@ -10,7 +10,7 @@ import { FixtureService } from '../../services/fixture.service';
 })
 export class FixturesComponent implements OnInit {
 
-  fixtures: Fixture[] = [];
+  fixtures!: Fixture;
 
   constructor(private fixtureService: FixtureService) { }
 

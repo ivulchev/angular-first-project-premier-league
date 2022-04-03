@@ -14,10 +14,10 @@
     display: flex;
     overflow: hidden;
     width: 550px;
-    color: white;
+    color: black;
     padding: 10px 20px;
     font-weight: 500;
-    background-image: linear-gradient(to right, #105bcd, #105bcd, #105bcd, #e22fa1, #ff2882);
+    background-color: white;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -25,7 +25,10 @@
     box-shadow: -16px 9px 29px 11px rgba(0,0,0,0.73)
 }
 
-
+.result--article:hover{
+    color: white;
+    background-image: linear-gradient(to right, #105bcd, #105bcd, #105bcd, #e22fa1, #ff2882);
+}
 
 
 .result--article a{
