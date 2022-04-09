@@ -1,0 +1,54 @@
+.posts{
+    padding: 20px 200px;
+}
+.post-list{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.post-article{
+    overflow: hidden;
+    font-family: 'League Gothic', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 1px;
+    border-color:rgb(39, 38, 38);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    
+}
+
+.header-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-wrapper{
+    background-color: lightskyblue;
+    padding: 2px 12px;
+    line-height: 2.5rem;
+}
+.info-wrapper p{
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 2.5rem;
+    padding: 0 10px;
+}
+
+
+.info-wrapper img{
+    width: 100%;
+    margin: 6px 0;
+}
+.button-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 20px;
+    padding-bottom: 10px;
+}
