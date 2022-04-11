@@ -9,6 +9,7 @@ import { PostsComponent } from './components/posts/posts.component';
 import { MyPostsComponent } from './components/my-posts/my-posts.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CreatePostsComponent } from './components/create-posts/create-posts.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'posts', component: PostsComponent },
   { path: 'my-posts', component: MyPostsComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  {path:'create-post', component:CreatePostsComponent}
 ];
 
 @NgModule({

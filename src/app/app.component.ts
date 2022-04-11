@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-
 
 @Component({
   selector: 'app-root',
@@ -12,7 +10,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 export class AppComponent {
   
-  constructor(public fbAuth: AngularFireAuth){
+  constructor(){
   }
   title = 'Premier League';
 }
