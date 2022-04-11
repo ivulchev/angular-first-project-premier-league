@@ -10,8 +10,8 @@ export class CreatePostService {
 
   constructor(private http: HttpClient) { }
 
-  createPost(body:{owner: string, title: string, text: string, image: string, date: any}): Observable<Post> {
+  createPost(body:{}, createdOn: any, author: any): Observable<Post> {
     let url = `https://premier-league-angular-exam-default-rtdb.europe-west1.firebasedatabase.app/`;
-    return this.http.post<Post>(`${url}/posts.json`, body)
+    return this.http.post<Post>(`${url}/posts.json`, {...body, createdOn, author, comments: [" "], voters: [" "]})
   }
 }
