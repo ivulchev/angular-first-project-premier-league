@@ -28,7 +28,6 @@
 }
 
 .header-wrapper{
-    background-color: lightskyblue;
     padding: 2px 12px;
     line-height: 2.5rem;
 }
@@ -40,7 +39,9 @@
 
 
 .info-wrapper img{
+    display: none;
     width: 100%;
+    max-height: 350px;
     margin: 6px 0;
 }
 .button-wrapper{

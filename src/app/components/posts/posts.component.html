@@ -1,34 +1,20 @@
 <section class="posts">
-    <ul class="post-list">
-        <li>
-            <article class="post-article">
+    <ul class="post-list" *ngFor="let item of posts ">
+        <li *ngFor = "let post of item">
+            <article class="post-article" *ngIf="post.author">
                 <div class="header-wrapper">
-                    <h3>User Name</h3> 
-                    <h3>Your predictions </h3>
-                    <time>Posted on: DD/MM/YY</time>
+                    <h3>{{post.author}}</h3> 
+                    <h3>{{post.postTitle}} </h3>
+                    <time>{{post.createdOn | date: 'MMM d, y, h:mm:ss a'}}</time>
                 </div>
                 <div class="info-wrapper">
-                <p>Who will win premier league this year? Share your thoughts...</p>
-                <img src="https://resources.premierleague.com/photos/2020/07/10/8bfb6be4-5e23-4ce2-970b-e85ced220cc0/GettyImages-955249480.jpg?width=1600&height=600" alt="image">
+                <p>{{post.postText}}</p>
                 </div>
-                <div class="button-wrapper"><a href="#">Comment Button</a> <a href="#">Like Button</a></div>
-
-            </article>
-        </li>
-        <li>
-            <article class="post-article">
-                <div class="header-wrapper">
-                    <h3>User Name</h3>
-                    <h3>Who will win the big game? </h3> 
-                    <time>Posted on: DD/MM/YY</time>
-
+                <div class="button-wrapper">
+                     <i class="fa-solid fa-comment"><a href="#"></a></i>
+                     <i class="fa-solid fa-thumbs-up"><a href="#"></a></i>
+                    <p>Likes: {{post.voters.length - 1}}</p>
                 </div>
-                <div class="info-wrapper">
-                    <p>The clash of the titans. The two teams are in fight for the championship. Who will win the big game and get closer to the title? </p>
-                    <img src="https://as01.epimg.net/en/imagenes/2021/02/07/football/1612690049_601489_1612690125_noticia_normal_recorte1.jpg" alt="image">
-                </div>
-                <div class="button-wrapper"><a href="#">Comment Button</a> <a href="#">Like Button</a></div>
-
             </article>
         </li>
     </ul>

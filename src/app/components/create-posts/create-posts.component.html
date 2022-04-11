@@ -23,14 +23,14 @@
                 Post must be at least 10 characters long.
             </p>
         </ng-container>
-        <label for="image-url" >Image URL</label>
+        <!-- <label for="image-url" >Image URL</label>
         <input #imageURL="ngModel" ngModel required type="text" class="form-input" placeholder="Paste your image url here..." name="imageURL"  />
         <ng-container *ngIf="imageURL.touched && imageURL.invalid">
             <p *ngIf="imageURL?.errors?.['required']" id="error">
                 Image URL is required.
             </p>
-        </ng-container>
-        <button type="button" class="post--btn" >Post</button>
+        </ng-container> -->
+        <button type="submit" class="post--btn" >Post</button>
     </div>
 </form>
 </section>

@@ -6,12 +6,22 @@ import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CreatePostService {
 
   constructor(private http: HttpClient) { }
 
   createPost(body:{}, createdOn: any, author: any): Observable<Post> {
     let url = `https://premier-league-angular-exam-default-rtdb.europe-west1.firebasedatabase.app/`;
-    return this.http.post<Post>(`${url}/posts.json`, {...body, createdOn, author, comments: [" "], voters: [" "]})
+    return this.http.post<Post>(`${url}posts.json`, {...body, createdOn, author, comments: [" "], voters: [" "]})
+  }
+
+  getPosts(): Observable<Post> {
+    let url = `https://premier-league-angular-exam-default-rtdb.europe-west1.firebasedatabase.app/`;
+    return this.http.get<Post>(`${url}posts.json`)
+  }
+
+  convert(obj:any){
+    return Object.entries(obj)
   }
 }

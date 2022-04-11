@@ -1,7 +1,9 @@
 export interface Post {
-    owner: string,
-    title: string,
-    text: string,
-    image: string,
-    date: any
+    author: string,
+    postTitle: string,
+    postText: string,
+    imageURL: string,
+    createdOn: any,
+    voters: [],
+    comments: []
 }

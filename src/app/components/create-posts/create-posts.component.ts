@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import {getAuth} from "firebase/auth";
 
-import { CreatePostService } from 'src/app/services/create-post.service';
+import { CreatePostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-create-posts',
@@ -25,16 +25,16 @@ export class CreatePostsComponent implements OnInit {
     let createdOn = this.getDate()
     const auth = getAuth()
     let user = auth.currentUser
+    if(newThemeForm.value.postText && newThemeForm.value.postTitle){
     this.postService.createPost(newThemeForm.value, createdOn, user!.email).subscribe({
       next: (theme) => {
-        console.log(theme);
         this.router.navigate(['/posts']);
       },
       error: (error) => {
         console.error(error);
       }
     })
-
+  }
     
   }
 
