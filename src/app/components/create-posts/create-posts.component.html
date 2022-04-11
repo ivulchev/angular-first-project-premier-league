@@ -1,13 +1,34 @@
-<form  class="create--form">
+<form #newThemeForm="ngForm" (ngSubmit)="submitNewTheme(newThemeForm)" class="create--form">
     <div class="form-group">
         <h1 > Create your post</h1>
         <p>Share you thoughts with your friends</p>
         <label for="title" >Title</label>
-        <input class="form-input" type="text" aria-label="default input example" placeholder="Title here..." name="title" />
+        <input #postTitle="ngModel" ngModel required  class="form-input" type="text" aria-label="default input example" placeholder="Title here..." name="postTitle" />
+        <!-- <ng-container *ngIf="postTitle.touched && postTitle.invalid">
+            <p *ngIf="postTitle.errors.required" class="error">
+                Theme name is required.
+            </p>
+            <p *ngIf="postTitle.errors.minlength" class="error">
+                Theme name must be at least 5 characters long.
+            </p>
+        </ng-container> -->
         <label for="text-area" >Text</label>
-        <textarea maxlength="100" placeholder="Short text no more than 100 symbols..." name="text-area"></textarea>
+        <textarea #postText="ngModel" ngModel required minlength="10" maxlength="100" placeholder="Short text no more than 100 symbols..." name="postText"></textarea>
+        <!-- <ng-container *ngIf="postText.touched && postText.invalid">
+            <p *ngIf="postText.errors.required" class="error">
+                The field with your post is required.
+            </p>
+            <p *ngIf="postText.errors.minlength" class="error">
+                Post must be at least 10 characters long.
+            </p>
+        </ng-container> -->
         <label for="image-url" >Image URL</label>
-        <input type="text" class="form-input" placeholder="Paste your image url here..." name="image-url"  />
+        <input #imageURL="ngModel" ngModel required type="text" class="form-input" placeholder="Paste your image url here..." name="imageURL"  />
+        <!-- <ng-container *ngIf="imageURL.touched && imageURL.invalid">
+            <p *ngIf="imageURL.errors.required" class="error">
+                Image URL is required.
+            </p>
+        </ng-container> -->
         <button type="submit" class="post--btn" >Post</button>
     </div>
 </form>

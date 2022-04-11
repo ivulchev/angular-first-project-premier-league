@@ -27,6 +27,7 @@ import { CreatePostsComponent } from './components/create-posts/create-posts.com
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,9 @@ import { AboutComponent } from './components/about/about.component';
     HttpClientInMemoryWebApiModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    FirebaseUIModule.forRoot(firebaseUiAuthConfig)
+    FirebaseUIModule.forRoot(firebaseUiAuthConfig),
+    FormsModule,                               
+    ReactiveFormsModule                        
   ],
   providers: [],
   bootstrap: [AppComponent]
