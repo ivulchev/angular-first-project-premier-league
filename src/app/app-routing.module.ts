@@ -10,6 +10,7 @@ import { MyPostsComponent } from './components/my-posts/my-posts.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CreatePostsComponent } from './components/create-posts/create-posts.component';
+import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'my-posts', component: MyPostsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  {path:'create-post', component:CreatePostsComponent}
+  { path: 'create-post', component: CreatePostsComponent },
+  { path: 'about', component: AboutComponent }
 ];
 
 @NgModule({

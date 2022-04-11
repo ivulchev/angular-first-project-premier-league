@@ -26,6 +26,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { CreatePostsComponent } from './components/create-posts/create-posts.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FooterComponent } from './components/footer/footer.component';
     RegisterComponent,
     CreatePostsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
