@@ -1,0 +1,43 @@
+.footer{
+    background-color: black;
+    color: aliceblue;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.7rem;
+    font-family:'Roboto',sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.footer  a,
+.footer  p{
+  color: aliceblue;
+  text-decoration: none;
+ 
+}
+
+.footer a:hover{
+    transition: all 150ms ease-in-out;
+    color: #93b0de;
+}
+
+@media screen and (max-width:780px) {
+  .footer{
+    z-index: 40;
+  }
+  .footer{
+    gap:5px
+
+  }
+}
+
+@media screen and (max-width:500px) {
+  .footer{
+    z-index: 40;
+  }
+}
+
