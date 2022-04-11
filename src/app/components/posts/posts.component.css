@@ -9,7 +9,6 @@
 
 .post-article{
     overflow: hidden;
-    font-family: 'League Gothic', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,7 +34,6 @@
 }
 .info-wrapper p{
     font-size: 25px;
-    letter-spacing: 2px;
     line-height: 2.5rem;
     padding: 0 10px;
 }

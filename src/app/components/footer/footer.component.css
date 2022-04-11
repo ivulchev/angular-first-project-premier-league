@@ -1,14 +1,16 @@
-.footer{
+.footer-wrapper{
     background-color: black;
     color: aliceblue;
     position:fixed;
     bottom: 0;
-    width: 100%;
+    width: 80%;
+    padding: 0 10%;
     line-height: 1.7rem;
     font-family:'Roboto',sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 20;
 }
 
 

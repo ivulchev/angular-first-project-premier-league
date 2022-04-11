@@ -1,0 +1,91 @@
+/* .edit--section{
+    
+    padding: 7.5% 0;
+    
+} */
+
+.create--form{
+    position:relative;
+    padding: 4% 30%;
+    background-image: url("https://lookcharms.com/wp-content/uploads/2021/11/skysports-premier-league-sky-sports_5547250.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: 'Anek Tamil', sans-serif;
+    
+}
+
+
+.create--form::after{
+    position: absolute;
+    content: " ";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.create--form h1{
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 200%;
+    color: white;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 15;
+}
+
+.form-group label{
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.form-group input,
+.form-group textarea{
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+.form-group p{
+    margin-bottom: 20px;
+    font-size: 80%;;
+}
+
+    
+.form-group .post--btn{
+    color: white;
+    background-color: rgb(42, 42, 236);
+    border:0.2em solid rgba(255,255,255,0);
+    padding: 1%;
+    font-size: 110%;
+    border-radius: 6px;
+    width: 60%;
+    margin: 0 20%;
+    cursor: pointer;
+}
+@media screen and (max-width:780px) {
+    .create--form{
+        width: 70vw;
+        margin: 15vw 15vw;
+        padding: 15% 7.5%;      
+    }
+}
+@media screen and (max-width:500px) {
+    .create--form{
+        width: 90vw;
+        margin: 20vw 5vw;
+        padding: 30% 7.5%;      
+    }
+}
+

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200;300;400&display=swap');
+@import '~firebaseui/dist/firebaseui.css';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -47,7 +50,7 @@ table {
 
 body, button {
 	color: #333;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Anek Tamil', sans-serif;
 }
 
 h1 {
@@ -63,5 +66,5 @@ h2, h3, h4 {
 
   /* everywhere else */
 * {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Anek Tamil', sans-serif;
 }
