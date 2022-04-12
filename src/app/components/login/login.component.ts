@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,7 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public auth: AuthenticationService) { }
+  constructor(public auth: AuthenticationService, public fbAuth: AngularFireAuth) { }
 
   ngOnInit(): void {
   }
