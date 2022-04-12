@@ -28,6 +28,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CreatePostsComponent,
     HeaderComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CreatePostsComponent } from './components/create-posts/create-posts.component';
 import { AboutComponent } from './components/about/about.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'create-post', component: CreatePostsComponent },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+  { path: '**', component: ErrorPageComponent }
 ];
 
 @NgModule({
