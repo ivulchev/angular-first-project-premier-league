@@ -29,6 +29,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { StoreModule } from '@ngrx/store';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     HeaderComponent,
     FooterComponent,
     AboutComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,7 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     AngularFireAuthModule,
     FirebaseUIModule.forRoot(firebaseUiAuthConfig),
     FormsModule,                               
-    ReactiveFormsModule                        
+    ReactiveFormsModule, StoreModule.forRoot({}, {})                        
   ],
   providers: [],
   bootstrap: [AppComponent]

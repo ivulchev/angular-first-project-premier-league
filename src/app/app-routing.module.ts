@@ -12,6 +12,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { CreatePostsComponent } from './components/create-posts/create-posts.component';
 import { AboutComponent } from './components/about/about.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component'
+import { PostDetailsComponent } from './components/post-details/post-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -26,11 +27,14 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'create-post', component: CreatePostsComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'posts/post-details/:id', component: PostDetailsComponent},
   { path: '**', component: ErrorPageComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    onSameUrlNavigation: 'reload'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -21,4 +21,4 @@
 </form>
 </ng-template>
 
-<app-error-page *ngIf="fbAuth.user; else showRegister"></app-error-page>
+<app-error-page *ngIf="fbAuth.user | async as user; else showRegister"></app-error-page>

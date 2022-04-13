@@ -4,6 +4,7 @@ export interface Post {
     postText: string,
     imageURL: string,
     createdOn: any,
+    likes: number,
     voters: [],
     comments: []
 }

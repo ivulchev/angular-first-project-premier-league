@@ -18,4 +18,4 @@
     </form>
 </ng-template>
 
-<app-error-page *ngIf="fbAuth.user; else showLogin"></app-error-page>
+<app-error-page *ngIf="fbAuth.user | async as user; else showLogin"></app-error-page>

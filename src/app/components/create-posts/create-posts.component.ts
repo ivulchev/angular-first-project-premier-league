@@ -21,7 +21,6 @@ export class CreatePostsComponent implements OnInit {
   }
 
   submitNewTheme(newThemeForm: NgForm): void {
-    console.log(newThemeForm.value);
     let createdOn = this.getDate()
     const auth = getAuth()
     let user = auth.currentUser
@@ -40,9 +39,5 @@ export class CreatePostsComponent implements OnInit {
 
   getDate(){
       return Date()
-  }
-
-  getUser(){
-    return this.fbAuth.user.subscribe()
   }
 }

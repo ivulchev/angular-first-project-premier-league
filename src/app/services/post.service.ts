@@ -13,15 +13,25 @@ export class CreatePostService {
 
   createPost(body:{}, createdOn: any, author: any): Observable<Post> {
     let url = `https://premier-league-angular-exam-default-rtdb.europe-west1.firebasedatabase.app/`;
-    return this.http.post<Post>(`${url}posts.json`, {...body, createdOn, author, comments: [" "], voters: [" "]})
+    return this.http.post<Post>(`${url}posts.json`, {...body, createdOn, author, comments: [" "], voters: [" "], likes: 0 })
   }
 
-  getPosts(): Observable<Post> {
+  getPosts(): Observable<any> {
     let url = `https://premier-league-angular-exam-default-rtdb.europe-west1.firebasedatabase.app/`;
-    return this.http.get<Post>(`${url}posts.json`)
+    return this.http.get<any>(`${url}posts.json`)
   }
 
-  convert(obj:any){
-    return Object.entries(obj)
+  getOnePost(id: any): Observable<any> {
+    let url = `https://premier-league-angular-exam-default-rtdb.europe-west1.firebasedatabase.app/`;
+    return this.http.get<any>(`${url}posts/${id}.json`)
+  }
+
+  addComment(text:string, createdOn: any, author: any, id: any, comm: []): Observable<Comment> {
+    let url = `https://premier-league-angular-exam-default-rtdb.europe-west1.firebasedatabase.app/`;
+    return this.http.patch<Comment>(`${url}posts/${id}.json`, { comments: [...comm, [author, text, createdOn]] })
+  }
+  vote(  id: any, user: any, voted: []): Observable<any> {
+    let url = `https://premier-league-angular-exam-default-rtdb.europe-west1.firebasedatabase.app/`;
+    return this.http.patch<any>(`${url}posts/${id}.json`, {likes: { ".sv": {"increment": 1 }}, voters: [...voted, user]})
   }
 }

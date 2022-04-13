@@ -1,20 +1,21 @@
 <section class="posts">
     <ul class="post-list" *ngFor="let item of posts ">
-        <li *ngFor = "let post of item">
+        <li *ngFor="let post of item">
             <article class="post-article" *ngIf="post.author">
                 <div class="header-wrapper">
-                    <h3>{{post.author}}</h3> 
+                    <h3>{{post.author}}</h3>
                     <h3>{{post.postTitle}} </h3>
                     <time>{{post.createdOn | date: 'MMM d, y, h:mm:ss a'}}</time>
                 </div>
                 <div class="info-wrapper">
-                <p>{{post.postText}}</p>
+                    <p>{{post.postText}}</p>
                 </div>
                 <div class="button-wrapper">
-                     <i class="fa-solid fa-comment"><a href="#"></a></i>
-                     <i class="fa-solid fa-thumbs-up"><a href="#"></a></i>
-                    <p>Likes: {{post.voters.length - 1}}</p>
+                    <i class="fa-solid fa-comment"> {{post.comments.length -1}}</i>
+                    <i class="fa-solid fa-thumbs-up">  {{post.likes}}</i>
+                    <button routerLink="post-details/{{item[0]}}"> Go to Details</button>
                 </div>
+                
             </article>
         </li>
     </ul>
