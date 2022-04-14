@@ -35,6 +35,10 @@
     font-weight: 700;
     color: black;
 }
+.header-wrapper .title{
+    font-size: 28px;
+    margin-left: 5px;
+}
 .info-wrapper p{
     font-size: 25px;
     line-height: 2.5rem;
@@ -57,10 +61,19 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.comment-author{
+    min-width: 200px;
+    padding-right: 8px;
+}
 .author-comment{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    width: 75%;
+}
+.comment-time{
+    width: 25%;
+    text-align: start;
 }
 
 .isVoted{

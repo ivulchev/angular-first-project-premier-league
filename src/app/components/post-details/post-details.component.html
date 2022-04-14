@@ -16,7 +16,7 @@
     <div class="comment-wrapper" *ngIf="post.comments.length > 1">
         <ul *ngFor="let comment of post.comments">
             <li *ngIf="comment.length > 1">
-                <div class="comment"><div class="author-comment"><p class="comment-author">{{comment[0]}}</p> <p class="comment-text">{{comment[1]}}</p></div> {{comment[2] |date: 'MMM d, y, h:mm:ss a' }}</div>
+                <div class="comment"><div class="author-comment"><p class="comment-author">{{comment[0]}}</p> <p class="comment-text">{{comment[1]}}</p></div> <p class="comment-time">{{comment[2] |date: 'MMM d, y, h:mm:ss a' }}</p></div>
             </li>
         </ul>
     </div>
