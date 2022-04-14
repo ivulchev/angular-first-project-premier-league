@@ -3,19 +3,22 @@
         <li *ngFor="let post of item">
             <article class="post-article" *ngIf="post.author">
                 <div class="header-wrapper">
-                    <h3>{{post.author}}</h3>
-                    <h3>{{post.postTitle}} </h3>
+                    <h3 class="author">{{post.author}}</h3>
+                    <h3 class="title">{{post.postTitle}} </h3>
                     <time>{{post.createdOn | date: 'MMM d, y, h:mm:ss a'}}</time>
                 </div>
                 <div class="info-wrapper">
-                    <p>{{post.postText}}</p>
+                    <p *ngIf="post.postText.length > 25">{{(post.postText| slice:0:25) + '...' }}</p>
+                    <p *ngIf="post.postText.length <= 25">{{post.postText}}</p>
                 </div>
                 <div class="button-wrapper">
                     <i class="fa-solid fa-comment"> {{post.comments.length -1}}</i>
-                    <i class="fa-solid fa-thumbs-up">  {{post.likes}}</i>
-                    <button routerLink="post-details/{{item[0]}}"> Go to Details</button>
+                    <i class="fa-solid fa-thumbs-up {{alreadyVoted(post.voters)}}">
+                        <p>{{post.likes}}</p>
+                    </i>
+                    <button class="details-btn" routerLink="post-details/{{item[0]}}"> Go to Details</button>
                 </div>
-                
+
             </article>
         </li>
     </ul>

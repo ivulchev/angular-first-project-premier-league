@@ -14,7 +14,7 @@
             </p>
         </ng-container>
         <label for="text-area" >Text</label>
-        <textarea #postText="ngModel" type="text" name="postText" ngModel id="postText"  class="height" required minlength="10"></textarea>
+        <textarea #postText="ngModel" type="text" name="postText" ngModel id="postText" placeholder="Yoor post must be between 10 and 250 characters long!" class="height" required minlength="10" maxlength="250"></textarea>
         <ng-container *ngIf="postText.touched && postText.invalid">
             <p *ngIf="postText?.errors?.['required']" id="error">
                 The field with your post is required.

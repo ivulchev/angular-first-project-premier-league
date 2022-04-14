@@ -24,35 +24,12 @@ export class PostsComponent implements OnInit {
       .subscribe(response => { this.posts = Object.entries(response) });
 
   }
-
-  // submitComment(newComment: NgForm): void {
-  //   let createdOn = this.getDate()
-  //   const auth = getAuth()
-  //   let user = auth.currentUser
-  //   if (newComment.value.comment.length > 5) {
-  //     this.postService.addComment(newComment.value.comment, createdOn, user!.email, this.posts[0][0]).subscribe({
-  //       next: (theme) => {
-  //         this.router.navigate(['/posts']);
-  //       },
-  //       error: (error) => {
-  //         console.error(error);
-  //       }
-  //     })
-  //   }
-  // }
-
-  // voteUP() :void{
-  //   this.postService.vote(this.posts[0][0]).subscribe({
-  //     next: (theme) => {
-  //       this.router.navigate(['/posts']);
-  //     },
-  //     error: (error) => {
-  //       console.error(error);
-  //     }
-  //   })
-  // }
-
-  getDate(){
-    return Date()
-}
+  alreadyVoted(voters: any){
+    const auth = getAuth()
+    let user = auth.currentUser
+    if(voters.includes(user?.email)){
+      return "isVoted"
+    }
+    return null
+  }
 }

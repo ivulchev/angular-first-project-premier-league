@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CreatePostService } from 'src/app/services/post.service';
 import { NgForm } from '@angular/forms';
 import { getAuth } from "firebase/auth";
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-post-details',
@@ -12,7 +13,7 @@ import { getAuth } from "firebase/auth";
 })
 export class PostDetailsComponent implements OnInit {
   post: any | undefined;
-  constructor(private postService: CreatePostService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private postService: CreatePostService, private router: Router, private route: ActivatedRoute, public fbAuth: AngularFireAuth) { }
 
   ngOnInit(): void {
     this.getPost()
@@ -72,5 +73,14 @@ export class PostDetailsComponent implements OnInit {
 
   getDate() {
     return Date()
+  }
+
+  alreadyVoted(voters: any){
+    const auth = getAuth()
+    let user = auth.currentUser
+    if(voters.includes(user?.email)){
+      return "isVoted"
+    }
+    return null
   }
 }
