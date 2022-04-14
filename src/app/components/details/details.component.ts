@@ -14,46 +14,38 @@ import { Players } from 'src/app/interfaces/players';
 })
 export class DetailsComponent implements OnInit {
   team: Details | undefined;
-  // coach: Coach | undefined;
   players: Players | undefined;
 
   constructor(private route: ActivatedRoute,
     private teamService: DetailsService,
     private location: Location) { }
 
-    ngOnInit(): void {
-      this.getTeam();
-      // this.getCoach();
-      this.getPlayers();
-    }
-  
-    getTeam(): void {
-      const id = Number(this.route.snapshot.paramMap.get('id'));
+  ngOnInit(): void {
+    this.getTeam();
+    this.getPlayers();
+  }
+
+  getTeam(): void {
+    this.route.params.subscribe(params => {
+      const id = params['id'];
       this.teamService.getTeam(id)
         .subscribe(team => this.team = team);
+    });
+  }
 
-    }
-    // getCoach(): void {
-    //   const id = Number(this.route.snapshot.paramMap.get('id'));
-    //   this.teamService.getCoach(id)
-    //     .subscribe(coach => this.coach = coach);
-    // }
 
-    getPlayers(): void {
-      const id = Number(this.route.snapshot.paramMap.get('id'));
+
+
+  getPlayers(): void {
+    this.route.params.subscribe(params => {
+      const id = params['id'];
       this.teamService.getPlayers(id)
         .subscribe(players => this.players = players)
+    });
+  }
 
-    }
-  
-    goBack(): void {
-      this.location.back();
-    }
-  
-    // save(): void {
-    //   if (this.team) {
-    //     this.teamService.updateTeam(this.team)
-    //       .subscribe(() => this.goBack());
-    //   }
-    // }
+
+  goBack(): void {
+    this.location.back();
+  }
 }

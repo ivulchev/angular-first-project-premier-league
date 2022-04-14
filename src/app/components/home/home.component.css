@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=League+Gothic&display=swap');
+.home{
+    padding: 0 60px;
+    height: calc(100vh - 130px);
+    background-image: url("https://cdn.dribbble.com/users/2777062/screenshots/14827404/media/50bde045b8a4dee9715223b1e648dfd9.jpg?compress=1&resize=1200x900&vertical=top");
+}
+
+.home-article{
+    padding: 30px;
+    padding-bottom: 40px;
+    background-color: white;
+    
+}
+
+.home-article p{
+    font-size: 110%;
+    text-align: left;
+    line-height: 1.6rem;
+    color: #242424;
+}
+
+.home-article a{
+    text-decoration: none;
+    color: goldenrod;
+}
+
+iframe {
+    float: left;
+    margin: 15px;
+  }
