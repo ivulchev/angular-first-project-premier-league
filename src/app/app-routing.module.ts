@@ -28,6 +28,7 @@ const routes: Routes = [
   { path: 'create-post', component: CreatePostsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'posts/post-details/:id', component: PostDetailsComponent},
+  { path: 'my-posts/post-details/:id', component: PostDetailsComponent},
   { path: '**', component: ErrorPageComponent }
 ];
 

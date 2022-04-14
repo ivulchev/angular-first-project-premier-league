@@ -4,7 +4,7 @@
         <h1 > Create your post</h1>
         <p>Share you thoughts with your friends</p>
         <label for="postTitle" >Title</label>
-        <input #postTitle="ngModel" ngModel required id="postTitle" class="form-input" type="text" aria-label="default input example" placeholder="Title here..." name="postTitle" />
+        <input #postTitle="ngModel" ngModel required id="postTitle" class="form-input" type="text" aria-label="default input example" placeholder="Title here..." name="postTitle" minlength="5" maxlength="50"/>
         <ng-container *ngIf="postTitle.touched && postTitle.invalid">
             <p *ngIf="postTitle?.errors?.['required']" id="error">
                 Theme name is required.
@@ -12,9 +12,12 @@
             <p *ngIf="postTitle?.errors?.['minlength']" id="error">
                 Theme name must be at least 5 characters long.
             </p>
+            <p *ngIf="postTitle?.errors?.['maxlength']" id="error">
+                Theme name must be no more than 50 characters long.
+            </p>
         </ng-container>
         <label for="text-area" >Text</label>
-        <textarea #postText="ngModel" type="text" name="postText" ngModel id="postText" placeholder="Yoor post must be between 10 and 250 characters long!" class="height" required minlength="10" maxlength="250"></textarea>
+        <textarea #postText="ngModel" type="text" name="postText" ngModel id="postText" placeholder="Your post must be between 10 and 250 characters long!" class="height" required minlength="10" maxlength="250"></textarea>
         <ng-container *ngIf="postText.touched && postText.invalid">
             <p *ngIf="postText?.errors?.['required']" id="error">
                 The field with your post is required.
@@ -22,14 +25,10 @@
             <p *ngIf="postText?.errors?.['minlength']" id="error">
                 Post must be at least 10 characters long.
             </p>
-        </ng-container>
-        <!-- <label for="image-url" >Image URL</label>
-        <input #imageURL="ngModel" ngModel required type="text" class="form-input" placeholder="Paste your image url here..." name="imageURL"  />
-        <ng-container *ngIf="imageURL.touched && imageURL.invalid">
-            <p *ngIf="imageURL?.errors?.['required']" id="error">
-                Image URL is required.
+            <p *ngIf="postText?.errors?.['maxlength']" id="error">
+                Post must be no more than 250 characters long.
             </p>
-        </ng-container> -->
+        </ng-container>
         <button type="submit" class="post--btn" >Post</button>
     </div>
 </form>

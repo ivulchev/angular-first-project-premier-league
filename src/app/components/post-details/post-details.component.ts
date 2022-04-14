@@ -13,7 +13,10 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class PostDetailsComponent implements OnInit {
   post: any | undefined;
-  constructor(private postService: CreatePostService, private router: Router, private route: ActivatedRoute, public fbAuth: AngularFireAuth) { }
+  constructor(private postService: CreatePostService,
+    private router: Router,
+    private route: ActivatedRoute,
+    public fbAuth: AngularFireAuth) { }
 
   ngOnInit(): void {
     this.getPost()
@@ -34,7 +37,7 @@ export class PostDetailsComponent implements OnInit {
     if (newComment.value.comment.length > 5 && user) {
       this.postService.addComment(newComment.value.comment, createdOn, user!.email, id, this.post.comments).subscribe({
         next: (theme) => {
-          setTimeout(() =>this.reloadCurrentRoute())
+          setTimeout(() => this.reloadCurrentRoute())
         },
         error: (error) => {
           console.error(error);
@@ -61,9 +64,9 @@ export class PostDetailsComponent implements OnInit {
 
   reloadCurrentRoute() {
     let currentUrl = this.router.url;
-    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
-        this.router.navigate([currentUrl]);
-        console.log(currentUrl);
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate([currentUrl]);
+      console.log(currentUrl);
     });
   }
 
@@ -75,10 +78,10 @@ export class PostDetailsComponent implements OnInit {
     return Date()
   }
 
-  alreadyVoted(voters: any){
+  alreadyVoted(voters: any) {
     const auth = getAuth()
     let user = auth.currentUser
-    if(voters.includes(user?.email)){
+    if (voters.includes(user?.email)) {
       return "isVoted"
     }
     return null

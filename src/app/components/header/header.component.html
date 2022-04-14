@@ -81,9 +81,10 @@
             <div class="auth-wrapper" *ngIf="fbAuth.user | async as user; else showLogin">
                 <li><a routerLink="/create-post">Create Post</a></li>
                 <li><a routerLink="/my-posts">My Posts</a></li>
-                <li><a (click)="fbAuth.signOut();">Logout</a></li>
+                <li><a (click)="fbAuth.signOut();" routerLink="/">Logout</a></li>
+                {{name | json}}
                 <li>
-                    Welcome, {{user.email}}
+                    Welcome, {{greeting(user.email)}}
                 </li>
             </div>
 
