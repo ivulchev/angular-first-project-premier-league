@@ -32,35 +32,92 @@
     font-weight: 700;
 }
 
+.wrapper.TOT,
+.wrapper.LEE,
+.wrapper.TOT h2,
+.wrapper.LEE h2{
+    color: black;
+}
 
 /* COLORS */
 .short--info.MUN{
-    background-image: linear-gradient(to bottom, #270806, #4b0d12, #730c18, #9c071a, #c60218, #c60218, #c60218, #c60218, #9c071a, #730c18, #4b0d12, #270806);
+    background-image: linear-gradient(to bottom, #c60218, #df2339, #c60218);
 }
 
 .short--info.CHE{
     background-image: linear-gradient(to bottom,  #032c64, #0a4595, #032c64);
 }
 
-.coach--details,
-.coach--details ul{
-    color:white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.short--info.NEW{
+    background-image: linear-gradient(to bottom,  #242323, #504e4e, #242323);
 }
 
-.coach--details img{
-    width: 30%;
-    border-radius: 100%;
+.short--info.WAT{
+    background-image: linear-gradient(to bottom,  #fe0, rgb(231, 222, 88), #fe0);
 }
 
-.coach--details h2{
-    font-size: 45px;
-    color:white;
-    font-weight: 700;
+.short--info.WOL{
+    background-image: linear-gradient(to bottom,  #f9a01b, #f7b758, #f9a01b);
 }
+.short--info.LIV{
+    background-image: linear-gradient(to bottom,  #e31b23, #d3595d, #e31b23);
+}
+
+.short--info.SOU{
+    background-image: linear-gradient(to bottom,  #d71920, #bb4a4e, #d71920);
+}
+
+.short--info.ARS{
+    background-image: linear-gradient(to bottom,  #fe0002, #d84141, #fe0002);
+}
+
+.short--info.BUR{
+    background-image: linear-gradient(to bottom,  #6a003a, #912f65, #6a003a);
+}
+
+.short--info.EVE{
+    background-image: linear-gradient(to bottom,  #00369c, #476aaa, #00369c);
+}
+
+.short--info.LEI{
+    background-image: linear-gradient(to bottom,  #273e8a, #58689c, #273e8a);
+}
+
+.short--info.TOT,
+.short--info.LEE{
+    background-image: linear-gradient(to bottom,  #f5f5f5, #ffffff, #f5f5f5);
+}
+
+.short--info.WES{
+    background-image: linear-gradient(to bottom,  #7d2c3b, #ad5d6c, #7d2c3b);
+}
+
+.short--info.MAC{
+    background-image: linear-gradient(to bottom,  #6caee0, #a6d4f7, #6caee0);
+}
+
+.short--info.BRI{
+    background-image: linear-gradient(to bottom,  #0054a6, #3371af, #0054a6);
+}
+
+.short--info.CRY{
+    background-image: linear-gradient(to bottom,  #eb302e, #e97877, #eb302e);
+}
+
+.short--info.BRE{
+    background-image: linear-gradient(to bottom,  #c61d23, rgb(238, 160, 159), #c61d23);
+}
+
+.short--info.AST{
+    background-image: linear-gradient(to bottom,  #480025, #70294e, #480025);
+}
+
+.short--info.NOR{
+    background-image: linear-gradient(to bottom,  #00a94f, #4ec083, #00a94f);
+}
+
+
+
 
 /* PLAYERS */
 .players{

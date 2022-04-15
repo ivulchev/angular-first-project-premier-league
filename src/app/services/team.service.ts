@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
 
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { Team } from '../interfaces/team';
 import { MessageService } from './message.service';
@@ -16,16 +15,6 @@ export class TeamService {
     private http: HttpClient,
     private messageService: MessageService) { }
 
-  /** GET heroes from the server */
-  /** GET heroes from the server */
-  // getTeams(): Observable<Team[]> {
-  //   return this.http.get<Team[]>(this.teamsUrl)
-  //     .pipe(
-  //       tap(_ => this.log('fetched teams')),
-  //       catchError(this.handleError<Team[]>('getTeams', []))
-  //     );
-  // }
-
   getTeams(): Observable<Team> {
     let tableUrl = `https://api-football-v1.p.rapidapi.com/v3/standings?season=2021&league=39`;
     const httpOptions = {
@@ -35,44 +24,5 @@ export class TeamService {
       })
     };
     return this.http.get<Team>(tableUrl, httpOptions)
-  }
-
-  // getTeam(id: number): Observable<Team> {
-  //   const url = `${this.teamsUrl}/${id}`;
-  //   return this.http.get<Team>(url).pipe(
-  //     tap(_ => this.log(`fetched team id=${id}`)),
-  //     catchError(this.handleError<Team>(`getTeam id=${id}`))
-  //   );
-  // }
-
-   /** PUT: update the hero on the server */
-  // updateTeam(team: Team): Observable<any> {
-  //   return this.http.put(this.teamsUrl, team, this.httpOptions).pipe(
-  //     tap(_ => this.log(`updated team id=${team.team.id}`)),
-  //     catchError(this.handleError<any>('updateTeam'))
-  //   );
-  // }
-
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
-
-  /** Log a HeroService message with the MessageService */
-  private log(message: string) {
-    this.messageService.add(`TeamService: ${message}`);
-  }
-
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-
-      // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead
-
-      // TODO: better job of transforming error for user consumption
-      this.log(`${operation} failed: ${error.message}`);
-
-      // Let the app keep running by returning an empty result.
-      return of(result as T);
-    };
   }
 }
