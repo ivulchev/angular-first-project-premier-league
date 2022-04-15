@@ -16,6 +16,11 @@ export class CreatePostService {
     return this.http.post<Post>(`${url}posts.json`, {...body, createdOn, author, comments: [" "], voters: [" "], likes: 0 })
   }
 
+  deletePost(  id: any): Observable<any> {
+    let url = `https://premier-league-angular-exam-default-rtdb.europe-west1.firebasedatabase.app/`;
+    return this.http.delete<any>(`${url}posts/${id}.json`)
+  }
+
   getPosts(): Observable<any> {
     let url = `https://premier-league-angular-exam-default-rtdb.europe-west1.firebasedatabase.app/`;
     return this.http.get<any>(`${url}posts.json`)

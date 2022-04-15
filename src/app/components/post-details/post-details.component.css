@@ -86,17 +86,25 @@
     color: #333;
 }
 
-.fa-thumbs-up p{
+.fa-thumbs-up p,
+.fa-trash-can p{
     margin-left: 8px;
     display: inline-block;
-    color: #333 !important;
+    color: #333;
+    text-transform: none !important;
 }
 
-.fa-thumbs-up:hover{
+.fa-trash-can p{
+    font: none !important;
+}
+
+.fa-thumbs-up:hover,
+.fa-trash-can:hover{
     cursor: pointer;
     color: rgb(235, 64, 64);
-    transition: all 500ms ease-in-out;
+    transition: all 400ms ease-in-out;
 }
+
 
 .isVoted:hover{
     cursor: unset;

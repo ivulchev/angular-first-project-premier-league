@@ -62,6 +62,18 @@ export class PostDetailsComponent implements OnInit {
     }
   }
 
+  delete(){
+    const id = this.route.snapshot.paramMap.get('id');
+    this.postService.deletePost(id).subscribe({
+      next: (theme) => {
+        this.router.navigate(['/'])
+      },
+      error: (error) => {
+        console.error(error);
+      }
+    })
+  }
+
   reloadCurrentRoute() {
     let currentUrl = this.router.url;
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
@@ -85,5 +97,15 @@ export class PostDetailsComponent implements OnInit {
       return "isVoted"
     }
     return null
+  }
+
+  ownerChecker(author: string){
+    const auth = getAuth()
+    let user = auth.currentUser
+    if(author === user?.email || user?.email === "admin@abv.bg"){
+      return true
+    }else{
+      return false
+    }
   }
 }
